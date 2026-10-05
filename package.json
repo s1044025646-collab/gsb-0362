@@ -1,0 +1,22 @@
+{
+  "name": "siteswap-backend",
+  "version": "1.0.0",
+  "description": "Siteswap 周期抛接合法性与落点冲突解释后端（仅 API 与 CLI）",
+  "type": "module",
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/server.js",
+    "cli": "node dist/cli.js",
+    "test": "npm run build && node --test --test-concurrency=1 \"dist/test/*.test.js\"",
+    "demo": "npm run build && node dist/demo.js"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "~22.15.0",
+    "typescript": "~5.9.0"
+  }
+}
